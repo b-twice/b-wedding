@@ -10,6 +10,7 @@ var gutil = require("gulp-util");
 var sass = require('gulp-sass');
 var paths = {
     pages: ['src/*.html'],
+    assets: ['src/assets/*'],
     styles: [
         'src/*.scss',
         'node_modules/bootstrap/scss/*.scss'
@@ -28,17 +29,22 @@ var paths = {
 
 
 //  DEV
-var watchedBrowserify = watchify(browserify({
+var package = browserify({
     basedir: '.',
     debug: true,
     entries: paths.entries,
     cache: {},
     packageCache: {}
-}).plugin(tsify));
+}).plugin(tsify);
+// var watchedBrowserify = watchify(package);
 
 gulp.task('copy-html-dev', function () {
     return gulp.src(paths.pages)
         .pipe(gulp.dest(paths.dist_dev));
+});
+gulp.task('copy-assets-dev', function () {
+    return gulp.src(paths.assets)
+        .pipe(gulp.dest(`${paths.dist_dev}/assets`));
 });
 
 gulp.task('sass', function () {
@@ -48,7 +54,7 @@ gulp.task('sass', function () {
 });
 
 function bundle() {
-    return watchedBrowserify
+    return package
         .bundle()
         .pipe(source('bundle.js'))
         .pipe(buffer())
@@ -56,12 +62,21 @@ function bundle() {
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.dist_dev));
 }
-gulp.task("default", ["copy-html-dev", "sass"], bundle);
-watchedBrowserify.on("update", bundle);
-watchedBrowserify.on("log", gutil.log);
+gulp.task("default", ["copy-html-dev", "copy-assets-dev", "sass"], bundle);
+// watchedBrowserify.on("update", bundle);
+// watchedBrowserify.on("log", gutil.log);
 
 
 // PROD
+gulp.task('copy-html-prod', function () {
+    return gulp.src(paths.pages)
+        .pipe(gulp.dest(paths.dist));
+});
+gulp.task('copy-assets-prod', function () {
+    return gulp.src(paths.assets)
+        .pipe(gulp.dest(`${paths.dist}/assets`));
+});
+
 gulp.task('build', ['copy-html-prod', "sass"], function () {
     return browserify({
             basedir: '.',
