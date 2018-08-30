@@ -4,73 +4,114 @@
         <meta charset="UTF-8" />
         <title>Hello World!</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <link rel="stylesheet" type="text/css" href="bootstrap.css">
     </head>
     <body>
-        <header class="my-5">
-            <h1 class="text-center display-2">Shannon & Brian</h1>
-        </header>
-        <section class="container landing">
-            <div class="row">
-                <div class="col-sm">
-                    <a class="card shadow-sm" href="#our-story">
-                        <img class="card-img-top img-fluid" src="./assets/All.png" alt="Our Story">
-                        <div class="card-body">
-                            <p class="card-text">Story</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm">
-                    <a class="card shadow-sm" href="#celebrate">
-                        <img class="card-img-top img-fluid" src="./assets/All.png" alt="The Elopement">
-                        <div class="card-body">
-                            <p class="card-text">Elopement</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm">
-                    <a class="card shadow-sm" href="#elopement">
-                        <img class="card-img-top img-fluid" src="./assets/All.png" alt="Come Celebrate">
-                        <div class="card-body">
-                            <p class="card-text">Celebrate</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <article class="mx-2 my-5" id="our-story">
-            <section class="row justify-content-center">
-                <div class="col-10 my-4">
-                    <h2 class="display-4">Story</h2>
-                </div>
-            </section id="elopement">
-            <section class="row justify-content-center">
-                <div class="col-10 my-4">
-                    <h2 class="display-4">Elopement</h2>
+        <div class="landing container">
+            <header class="py-5" style="height:50%">
+                <h1 class="text-center display-3">
+                    <div>Shannon</div>
+                    <div>& </div>
+                    <div>Brian</div>
+
+                </h1>
+            </header>
+            <section>
+                <div class="row">
+                    <div class="col-md py-4 d-flex justify-content-center">
+                        <a class="card shadow-sm font-weight-bold" href="#our-story">
+                            <img class="card-img-top" src="./assets/us.jpg" alt="Our Story">
+                            <div class="card-body">
+                                <p class="card-text">Story</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md py-4 d-flex justify-content-center" >
+                        <a class="card shadow-sm font-weight-bold" href="#elopement">
+                            <img class="card-img-top" src="./assets/clocktower.jpg" alt="The Elopement">
+                            <div class="card-body">
+                                <p class="card-text">Elopement</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md py-4 d-flex justify-content-center">
+                        <a class="card shadow-sm font-weight-bold" href="#celebrate">
+                            <img class="card-img-top" src="./assets/richmond.jpg" alt="Come Celebrate">
+                            <div class="card-body">
+                                <p class="card-text">Celebrate</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </section>
-            <section class="row justify-content-center" id="celebrate">
-                <div class="col-10 my-4">
-                    <h2 class="display-4">Celebrate</h2>
+        </div>
+        <article class="content mt-3">
+            <section>
+                <div class="row section-banner our-story" id="our-story"></div>
+                <div class="row d-flex justify-content-center section-content">
+                    <div class="card col-10 rounded-0">
+                        <div class="card-body">
+                            <!-- <div class="col-12 d-flex align-items-end justify-content-center"> -->
+                            <div class="card-title">
+                                <h2 class="display-4 text-center my-4">Story</h2>
+                            </div>
+                            <p>
+                                It all started in an alley. The night clear, the air brisk. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eros libero, tincidunt in velit at, molestie maximus sapien. Curabitur varius consequat sem, ut fringilla velit malesuada vitae. Proin turpis lectus, pharetra at sem vel, feugiat rutrum sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin feugiat enim at eros faucibus, vitae cursus elit eleifend. Ut mattis orci ex, vel mattis quam interdum vitae. Mauris condimentum, magna vel tristique efficitur, nibh eros auctor odio, id cursus orci lectus eleifend odio. Vivamus fringilla porttitor quam. Fusce eget porta odio, non tempor lectus. Suspendisse potenti. 
+                            </p>
+                            <p>
+                                Donec placerat odio at pharetra luctus. Ut placerat ac est fringilla fringilla. Nunc gravida, magna vel porta commodo, metus neque varius erat, a tincidunt dui leo nec leo. Proin quis fermentum velit. Vestibulum pharetra vitae nisi lobortis tempor. In enim metus, feugiat eu massa vestibulum, blandit lacinia arcu. Proin at sem elit. 
+                            </p>
+                            <p>
+                                Quisque sodales arcu ut mattis facilisis. Pellentesque fermentum, ante eu pellentesque egestas, nibh tortor iaculis nunc, eu tempus eros urna id tellus. Pellentesque bibendum eget dolor sit amet congue. Curabitur a rhoncus sem. Cras ut ipsum eget dui vestibulum iaculis id nec orci. Quisque sagittis nibh est, eu blandit enim interdum ut.
+                            </p>
+
+                        </div>
+                    </div>
                 </div>
-                <form class="col-6 rsvp-form bg-light rounded p-4">
-                    <h3 class="text-center display-5">RSVP</h3>
-                    <div class="form-group">
-                        <label for="rsvpName">Name</label>
-                        <input type="text" class="form-control" id="rsvpName" placeholder="Your Name">
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="rsvpResponse" id="rsvpResponse1" value="Yes">
-                            <label class="form-check-label" for="rsvpResponse2">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="rsvpResponse" id="rsvpResponse2" value="No">
-                            <label class="form-check-label" for="rsvpResponse2">No</label>
+            </section>
+            <section>
+                <div class="row section-banner elopement" id="elopement"></div>
+                <div class="row d-flex justify-content-center section-content">
+                    <div class="card col-10 rounded-0">
+                        <div class="card-body">
+                            <!-- <div class="col-12 d-flex align-items-end justify-content-center"> -->
+                            <div class="card-title">
+                                <h2 class="display-4 text-center my-4">Elopement</h2>
+                            </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                </div>
+            </section>
+            <section>
+                <div class="row section-banner celebrate" id="celebrate"></div>
+                <div class="row d-flex justify-content-center section-content">
+                    <div class="card col-10 rounded-0">
+                        <div class="card-body">
+                            <!-- <div class="col-12 d-flex align-items-end justify-content-center"> -->
+                            <div class="card-title">
+                                <h2 class="display-4 text-center my-4">Celebrate</h2>
+                            </div>
+                            <form class="col-6 rsvp-form bg-light rounded p-4">
+                                <h3 class="text-center display-5">RSVP</h3>
+                                <div class="form-group">
+                                    <label for="rsvpName">Name</label>
+                                    <input type="text" class="form-control" id="rsvpName" placeholder="Your Name">
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="rsvpResponse" id="rsvpResponse1" value="Yes">
+                                        <label class="form-check-label" for="rsvpResponse2">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="rsvpResponse" id="rsvpResponse2" value="No">
+                                        <label class="form-check-label" for="rsvpResponse2">No</label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
             </section>
         </article>
         <script src="bundle.js"></script>
