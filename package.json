@@ -18,7 +18,9 @@
   },
   "homepage": "https://gitlab.com/bgeo/wedding#README",
   "dependencies": {
+    "@types/mapbox-gl": "^0.48.0",
     "bootstrap": "^4.1.3",
+    "mapbox-gl": "^0.48.0",
     "sqlite3": "^4.0.2"
   },
   "devDependencies": {
