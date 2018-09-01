@@ -1,0 +1,22 @@
+# DO NOT COPY - systemd unit file - /etc/systemd/system/wedding.service 
+# sudo vim /etc/systemd/system/wedding.service 
+# sudo systemctl start wedding
+# sudo systemctl enable wedding
+# sudo systemctl reload-or-restart wedding
+
+[Unit]
+Description=instance to run node server for wedding site
+
+[Service]
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=tiles
+User=bgeo
+Group=www-data
+WorkingDirectory=/var/www/wedding
+Environment=NODE_ENV=production
+ExecStart=/usr/local/bin/node /var/www/wedding/server.js
+
+[Install]
+WantedBy=multi-user.target
