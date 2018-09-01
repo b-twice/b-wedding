@@ -1,5 +1,10 @@
 import createMap from './map';
+import rsvp from './rsvp';
 
-createMap();
+window.addEventListener("load", () => {
 
+    rsvp();
+    createMap();
+
+});
 

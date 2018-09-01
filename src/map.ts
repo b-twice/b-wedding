@@ -1,12 +1,12 @@
 import * as mapboxgl from 'mapbox-gl';
 import places from './places';
-import SECRET from './secret';
+import CONFIG from './config';
 
 function addMap(): mapboxgl.Map {
 
     // es6 modules are immutable, this is a workaround
     // see: https://github.com/Microsoft/TypeScript/issues/6751#issuecomment-177114001
-    (mapboxgl as any).accessToken = SECRET.mapboxAccessToken;
+    (mapboxgl as any).accessToken = CONFIG.mapboxAccessToken;
     let ll = new mapboxgl.LngLat(-119.702222, 34.424111);
 
     let map = new mapboxgl.Map({
@@ -15,6 +15,8 @@ function addMap(): mapboxgl.Map {
       zoom: 13,
       attributionControl: false,
       style: 'mapbox://styles/bbrown4/cjlgzlt2a07902so1c00a8bx9'
+
+    //   style: 'mapbox://styles/mapbox/outdoors-v9'
     });
     let nav = new mapboxgl.NavigationControl();
     map.addControl(nav, 'top-left');

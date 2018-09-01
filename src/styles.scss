@@ -126,3 +126,14 @@ $theme-colors: (
         max-width:900px;
     }
 }
+
+.rsvp-container {
+    min-height:20rem;
+}
+
+.loading {
+    & svg path,
+    svg rect{
+        fill: theme(celebrate);
+    }
+}

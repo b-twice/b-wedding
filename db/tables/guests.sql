@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS Guests
+(
+    Id INTEGER PRIMARY KEY,
+    Name TEXT NOT NULL,
+    Response TEXT NOT NULL
+);
