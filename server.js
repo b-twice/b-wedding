@@ -1,3 +1,4 @@
+const http = require('http');
 const express = require('express');
 const path = require('path');
 const sqlite3 = require('sqlite3');
@@ -44,4 +45,6 @@ app.use('/', function(req, res){
   res.sendFile(app.get(root), '/index.html');
 });
 
-app.listen(3010, () => console.log('Example app listening on port 3000!'));
+
+app.set('port', 3010);
+http.createServer(app).listen(app.get('port'), "127.0.0.1");

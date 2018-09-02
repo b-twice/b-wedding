@@ -16,7 +16,7 @@ User=bgeo
 Group=www-data
 WorkingDirectory=/var/www/wedding
 Environment=NODE_ENV=production
-ExecStart=/usr/local/bin/node /var/www/wedding/server.js
+ExecStart=/usr/bin/node /var/www/wedding/server.js
 
 [Install]
 WantedBy=multi-user.target

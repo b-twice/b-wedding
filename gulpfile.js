@@ -74,7 +74,7 @@ gulp.task("default", ["clean", "copy-html", "copy-assets", "sass"], bundle);
 
 
 // PROD
-gulp.task('build', ['clean', 'copy-html', "sass"], function () {
+gulp.task('build', ['clean', 'copy-html', "copy-assets", "sass"], function () {
     return browserify({
             basedir: '.',
             debug: false,
