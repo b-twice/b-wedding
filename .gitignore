@@ -57,3 +57,4 @@ __build__/**
 
 # pkg specific
 config.ts
+app.db
