@@ -1,0 +1,12 @@
+# setup pipeline on jenkins
+# configure webhook to gitlab
+# create build/deploy sh files
+# configure nginx server
+# add subdomain to letsencrypt
+
+
+# issues
+# npm out of date on npm install -> upgrade version
+# syncing config file not committed to repo -> create custom script to ssh into jenkins and move file
+# files in tiles repo were not the same as on server 
+# letsencrypt webroot -> add subdomain to list of all domains/subs, don't do standalone
