@@ -3,6 +3,7 @@
 # create build/deploy sh files
 # configure nginx server
 # add subdomain to letsencrypt
+# update sudo visudo to grant ability to restart service (see sudo visudo appdeploy)
 
 
 # issues
