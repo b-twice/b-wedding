@@ -68,13 +68,13 @@ function bundle() {
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.dist));
 }
-gulp.task("default", ["clean", "copy-html", "copy-assets", "sass"], bundle);
+gulp.task("default", gulp.series("clean", "copy-html", "copy-assets", "sass"), bundle);
 // watchedBrowserify.on("update", bundle);
 // watchedBrowserify.on("log", gutil.log);
 
 
 // PROD
-gulp.task('build', ['clean', 'copy-html', "copy-assets", "sass"], function () {
+gulp.task('build', gulp.series('clean', 'copy-html', "copy-assets", "sass"), function () {
     return browserify({
             basedir: '.',
             debug: false,
